@@ -1,0 +1,63 @@
+@import "bootstrap/scss/bootstrap";
+
+#content {
+  display: none;
+}
+
+header {
+  margin-bottom: 25px;
+
+  &#front-page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .header-image {
+      width: 100%;
+      height: 600px;
+      position: relative;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+      }
+    }
+  }
+
+  &#page,
+  &#post {
+    width: 100%;
+    height: 300px;
+    background-color: #3f3f3f;
+    position: relative;
+  }
+
+  .header-title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.post-tags {
+  .badge {
+    margin-right: 10px;
+  }
+}
